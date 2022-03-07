@@ -3,7 +3,6 @@ import os
 import requests
 from discord_webhook import DiscordWebhook, DiscordEmbed
 
-hyperlink_format = '<a href="{link}">{text}</a>'
 webhook = DiscordWebhook(url=os.environ["webhook_url"], username="Devtron")
 r = requests.get('https://api.github.com/repos/%s/releases/latest'%os.environ["repo"])
 
